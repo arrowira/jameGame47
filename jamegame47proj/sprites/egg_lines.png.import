@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vnx57otkkylt"
-path="res://.godot/imported/Egg_Cutout.png-f55886adc3b0d3dd87efa6847d0f9ccd.ctex"
+uid="uid://bl5kjn2tkxr5x"
+path="res://.godot/imported/egg_lines.png-d89a825638403e0696727218b12db72c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Egg_Cutout.png"
-dest_files=["res://.godot/imported/Egg_Cutout.png-f55886adc3b0d3dd87efa6847d0f9ccd.ctex"]
+source_file="res://sprites/egg_lines.png"
+dest_files=["res://.godot/imported/egg_lines.png-d89a825638403e0696727218b12db72c.ctex"]
 
 [params]
 

@@ -9,7 +9,9 @@ var inBounds: bool = false
 @export var topLeftCornerPos: Vector2 = Vector2(128,128)
 
 var lineColor: Color = Color.BLUE
-
+func clear():
+	for child in lines.get_children():
+		child.queue_free()
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton:
@@ -20,9 +22,9 @@ func _input(event: InputEvent) -> void:
 				
 				#new line created
 				currentLine = Line2D.new()
-				#urrentLine.default_color = Color.BLUE
+				
 				var grad := Gradient.new()
-				grad.colors = [lineColor*0.7,lineColor] # pick any colors
+				grad.colors = [lineColor*0.7,lineColor]
 				grad.offsets = [0.0, 0.3]
 				currentLine.gradient = grad
 				
@@ -41,7 +43,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_blue_pressed() -> void:
-	lineColor=Color.BLUE
+	lineColor=Color.CORNFLOWER_BLUE
 
 
 func _on_red_pressed() -> void:
