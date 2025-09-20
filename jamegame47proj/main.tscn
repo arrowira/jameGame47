@@ -1,9 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://mxrwc2j2xlyo"]
+[gd_scene load_steps=3 format=3 uid="uid://mxrwc2j2xlyo"]
 
 [ext_resource type="PackedScene" uid="uid://8tcpyfwl35m8" path="res://canvas.tscn" id="1_eyv82"]
+[ext_resource type="Texture2D" uid="uid://bagc2846hnccr" path="res://sprites/Egg_Cutout.png" id="2_auj2f"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="canvas" parent="." instance=ExtResource("1_eyv82")]
-canvasSize = Vector2(300, 300)
-topLeftCornerPos = Vector2(0, 0)
+canvasSize = Vector2(100, 120)
+topLeftCornerPos = Vector2(10, 10)
+
+[node name="EggCutout" type="Sprite2D" parent="canvas"]
+position = Vector2(64, 72)
+texture = ExtResource("2_auj2f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 126.0
+offset_top = -10.0
+offset_right = 408.0
+offset_bottom = 313.0
+color = Color(0.709804, 0.572549, 0.784314, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = -14.0
+offset_top = 144.0
+offset_right = 408.0
+offset_bottom = 313.0
+color = Color(0.709804, 0.572549, 0.784314, 1)
