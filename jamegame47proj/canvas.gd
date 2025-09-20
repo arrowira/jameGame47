@@ -38,3 +38,16 @@ func _input(event: InputEvent) -> void:
 			
 				currentLine.add_point(event.position)
 					
+
+
+func _on_blue_pressed() -> void:
+	lineColor=Color.BLUE
+
+
+func _on_red_pressed() -> void:
+	lineColor=Color.ORANGE_RED
+
+
+
+func _on_green_pressed() -> void:
+	lineColor=Color.LIME_GREEN

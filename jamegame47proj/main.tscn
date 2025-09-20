@@ -14,7 +14,6 @@ position = Vector2(64, 72)
 texture = ExtResource("2_auj2f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = 126.0
 offset_top = -10.0
 offset_right = 408.0
@@ -22,7 +21,6 @@ offset_bottom = 313.0
 color = Color(0.709804, 0.572549, 0.784314, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
 offset_left = -14.0
 offset_top = 144.0
 offset_right = 408.0

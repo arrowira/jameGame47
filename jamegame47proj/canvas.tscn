@@ -1,8 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://8tcpyfwl35m8"]
+[gd_scene load_steps=4 format=3 uid="uid://8tcpyfwl35m8"]
 
 [ext_resource type="Script" path="res://canvas.gd" id="1_flsje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ak31e"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7btlx"]
 
 [node name="canvas" type="Node2D"]
 script = ExtResource("1_flsje")
 
 [node name="Line2D" type="Line2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="blue" type="Button" parent="CanvasLayer"]
+offset_top = 140.0
+offset_right = 22.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(4.33177e-06, 0.657455, 0.838282, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.658824, 0.839216, 1)
+theme_override_colors/icon_pressed_color = Color(0.326912, 0.818844, 1, 1)
+theme_override_colors/icon_hover_color = Color(7.31587e-06, 0.702011, 0.893316, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="red" type="Button" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 140.0
+offset_right = 44.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 0.338464, 0.24117, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.342782, 0.231766, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.65871, 0.506316, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.453038, 0.0932906, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="green" type="Button" parent="CanvasLayer"]
+offset_left = 44.0
+offset_top = 140.0
+offset_right = 66.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0.717623, 0.313356, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.717647, 0.313726, 1)
+theme_override_colors/icon_pressed_color = Color(0.146879, 0.908987, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.769318, 0.25329, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="CanvasLayer/blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="CanvasLayer/red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="CanvasLayer/green" to="." method="_on_green_pressed"]
