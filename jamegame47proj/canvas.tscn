@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://8tcpyfwl35m8"]
+[gd_scene load_steps=4 format=3 uid="uid://8tcpyfwl35m8"]
 
 [ext_resource type="Script" path="res://canvas.gd" id="1_flsje"]
-[ext_resource type="Script" path="res://LineHitboxes.gd" id="2_i1t78"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ak31e"]
 
@@ -11,14 +10,30 @@
 script = ExtResource("1_flsje")
 
 [node name="Line2D" type="Line2D" parent="."]
-script = ExtResource("2_i1t78")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 193.0
+offset_top = 143.0
+offset_right = 323.0
+offset_bottom = 163.0
+color = Color(0.640455, 0.566732, 0.379263, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 193.0
+offset_top = 137.0
+offset_right = 323.0
+offset_bottom = 157.0
+color = Color(0.720157, 0.644033, 0.45118, 1)
+metadata/_edit_use_anchors_ = true
+
 [node name="blue" type="Button" parent="CanvasLayer"]
-offset_top = 140.0
-offset_right = 22.0
-offset_bottom = 162.0
+offset_left = 192.0
+offset_top = 136.0
+offset_right = 214.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(4.33177e-06, 0.657455, 0.838282, 1)
@@ -31,12 +46,13 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="red" type="Button" parent="CanvasLayer"]
-offset_left = 22.0
-offset_top = 140.0
-offset_right = 44.0
-offset_bottom = 162.0
+offset_left = 214.0
+offset_top = 136.0
+offset_right = 236.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(1, 0.338464, 0.24117, 1)
@@ -49,12 +65,13 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="green" type="Button" parent="CanvasLayer"]
-offset_left = 44.0
-offset_top = 140.0
-offset_right = 66.0
-offset_bottom = 162.0
+offset_left = 236.0
+offset_top = 136.0
+offset_right = 258.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(0, 0.717623, 0.313356, 1)
@@ -67,12 +84,13 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="pink" type="Button" parent="CanvasLayer"]
-offset_left = 66.0
-offset_top = 140.0
-offset_right = 88.0
-offset_bottom = 162.0
+offset_left = 258.0
+offset_top = 136.0
+offset_right = 280.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(0.936377, 0.457872, 0.808484, 1)
@@ -85,12 +103,13 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="yellow" type="Button" parent="CanvasLayer"]
-offset_left = 88.0
-offset_top = 140.0
-offset_right = 110.0
-offset_bottom = 162.0
+offset_left = 280.0
+offset_top = 136.0
+offset_right = 302.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(0.981108, 0.783762, 7.70092e-07, 1)
@@ -103,12 +122,13 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="purple" type="Button" parent="CanvasLayer"]
-offset_left = 110.0
-offset_top = 140.0
-offset_right = 132.0
-offset_bottom = 162.0
+offset_left = 302.0
+offset_top = 136.0
+offset_right = 324.0
+offset_bottom = 158.0
 theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_normal_color = Color(0.618289, 0.492006, 1, 1)
@@ -121,6 +141,7 @@ icon = SubResource("CanvasTexture_7btlx")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/blue" to="." method="_on_blue_pressed"]
 [connection signal="pressed" from="CanvasLayer/red" to="." method="_on_red_pressed"]

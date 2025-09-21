@@ -7,11 +7,14 @@ var currentLine: Line2D = null
 var inBounds: bool = false
 @export var canvasSize: Vector2 = Vector2(128,128)
 @export var topLeftCornerPos: Vector2 = Vector2(128,128)
-
+var clearing = false
 var lineColor: Color = Color.BLUE
 func clear():
+	clearing = true
 	for child in lines.get_children():
+		
 		child.queue_free()
+	clearing = false
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton:
@@ -34,9 +37,10 @@ func _input(event: InputEvent) -> void:
 					currentLine.add_point(event.position)
 	elif event is InputEventMouseMotion:
 		inBounds=topLeftCornerPos.x<event.position.x and event.position.x < topLeftCornerPos.x+canvasSize.x and topLeftCornerPos.y<event.position.y and event.position.y < topLeftCornerPos.y+canvasSize.y
-		if pressed:
+		if pressed and not clearing:
 			#actively drawing
-			if inBounds:
+			if inBounds and currentLine != null:
+				print(clearing)
 				currentLine.add_point(event.position)
 					
 

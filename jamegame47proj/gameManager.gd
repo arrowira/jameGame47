@@ -3,7 +3,7 @@ extends Node2D
 
 var hundredths: int = 0
 var accumulated_time := 0.0
-var threshold = 15
+var threshold = 20
 var Score = 0
 
 func _process(delta):
@@ -16,11 +16,15 @@ func _process(delta):
 	$timer/timeLeft.text = str(seconds)
 	if seconds > threshold:
 		#restart
+		for i in get_node("/root/Node2D/canvas/Line2D").get_children():
+			Score+=i.points.size()
+		
+		
+		get_node("/root/Node2D/timer/Label2").text = "Score: " + str(Score)
 		hundredths = 0
 		$model_egg.clearRows()
 		$canvas.clear()
-		Score += get_node("/root/Node2D/canvas/Line2D").points.size() / 100
-		get_node("/root/Node2D/timer/Label2").text = "Score: " + str(Score)
+		
 		
 		
 		
