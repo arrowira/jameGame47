@@ -23,14 +23,36 @@ func _process(delta):
 		View.transparent_bg = true
 		View.size = Vector2(256, 256)
 		add_child(View)
-		var Rows = get_node("/root/Node2D/model_egg/rows/row0")
-		var Con = Rows.duplicate()
-		Con.position = Vector2(20, 20)
+		var Con = Node2D.new()
+		var R1 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R1.position = Vector2(20, 33)
+		Con.add_child(R1)
+		var R2 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R2.position = Vector2(20, 51)
+		Con.add_child(R2)
+		var R3 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R3.position = Vector2(20, 69)
+		Con.add_child(R3)
+		var R4 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R4.position = Vector2(20, 87)
+		Con.add_child(R4)
+		var R5 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R5.position = Vector2(20, 105)
+		Con.add_child(R5)
+		var R6 = get_node("/root/Node2D/model_egg/rows/row0").duplicate()
+		R6.position = Vector2(20, 123)
+		Con.add_child(R6)
+		Con.position = Vector2(0, 0)
 		View.add_child(Con)
 		await RenderingServer.frame_post_draw
 	
 		var Test = TextureRect.new()
 		Test.texture = View.get_texture()
 		Test.size = View.size
-		Test.position = Vector2(100, 100)
+		Test.position = Vector2(100, 0)
 		add_child(Test)
+		
+		
+	
+		
+		
