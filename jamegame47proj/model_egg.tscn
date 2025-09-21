@@ -10,49 +10,42 @@
 position = Vector2(0, -3)
 
 [node name="row0" type="Sprite2D" parent="rows"]
-position = Vector2(64, 25)
+position = Vector2(64, 33)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16
 script = ExtResource("2_6pxms")
 
 [node name="row1" type="Sprite2D" parent="rows"]
-position = Vector2(64, 42)
+position = Vector2(64, 51)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16
 script = ExtResource("2_6pxms")
 
 [node name="row2" type="Sprite2D" parent="rows"]
-position = Vector2(64, 58)
+position = Vector2(64, 69)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16
 script = ExtResource("2_6pxms")
 
 [node name="row3" type="Sprite2D" parent="rows"]
-position = Vector2(64, 75)
+position = Vector2(64, 87)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16
 script = ExtResource("2_6pxms")
 
 [node name="row4" type="Sprite2D" parent="rows"]
-position = Vector2(64, 91)
+position = Vector2(64, 105)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16
 script = ExtResource("2_6pxms")
 
 [node name="row5" type="Sprite2D" parent="rows"]
-position = Vector2(64, 108)
-texture = ExtResource("1_b55pm")
-vframes = 42
-frame = 16
-script = ExtResource("2_6pxms")
-
-[node name="row6" type="Sprite2D" parent="rows"]
-position = Vector2(64, 126)
+position = Vector2(64, 123)
 texture = ExtResource("1_b55pm")
 vframes = 42
 frame = 16

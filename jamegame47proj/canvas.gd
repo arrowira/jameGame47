@@ -24,7 +24,7 @@ func _input(event: InputEvent) -> void:
 				currentLine = Line2D.new()
 				
 				var grad := Gradient.new()
-				grad.colors = [lineColor*0.7,lineColor]
+				grad.colors = [lineColor*0.9,lineColor]
 				grad.offsets = [0.0, 0.3]
 				currentLine.gradient = grad
 				
@@ -53,3 +53,13 @@ func _on_red_pressed() -> void:
 
 func _on_green_pressed() -> void:
 	lineColor=Color.LIME_GREEN
+
+
+func _on_pink_pressed() -> void:
+	lineColor = Color.PLUM
+	
+func _on_yellow_pressed() -> void:
+	lineColor = Color.YELLOW
+
+func _on_purple_pressed() -> void:
+	lineColor = Color.MEDIUM_PURPLE

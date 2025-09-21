@@ -66,6 +66,63 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="pink" type="Button" parent="CanvasLayer"]
+offset_left = 66.0
+offset_top = 140.0
+offset_right = 88.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0.936377, 0.457872, 0.808484, 1)
+theme_override_colors/icon_focus_color = Color(0.937255, 0.458824, 0.807843, 1)
+theme_override_colors/icon_pressed_color = Color(0.956633, 0.632564, 0.85774, 1)
+theme_override_colors/icon_hover_color = Color(0.94225, 0.49772, 0.818495, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="yellow" type="Button" parent="CanvasLayer"]
+offset_left = 88.0
+offset_top = 140.0
+offset_right = 110.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0.981108, 0.783762, 7.70092e-07, 1)
+theme_override_colors/icon_focus_color = Color(0.980392, 0.784314, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.823253, 0.272638, 1)
+theme_override_colors/icon_hover_color = Color(0.990467, 0.79248, 7.70092e-07, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="purple" type="Button" parent="CanvasLayer"]
+offset_left = 110.0
+offset_top = 140.0
+offset_right = 132.0
+offset_bottom = 162.0
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0.618289, 0.492006, 1, 1)
+theme_override_colors/icon_focus_color = Color(0.619608, 0.490196, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.669713, 0.573979, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.633955, 0.515401, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ak31e")
+icon = SubResource("CanvasTexture_7btlx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="CanvasLayer/blue" to="." method="_on_blue_pressed"]
 [connection signal="pressed" from="CanvasLayer/red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="CanvasLayer/green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="CanvasLayer/pink" to="." method="_on_pink_pressed"]
+[connection signal="pressed" from="CanvasLayer/yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="CanvasLayer/purple" to="." method="_on_purple_pressed"]
