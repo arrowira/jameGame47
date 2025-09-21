@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://mxrwc2j2xlyo"]
+[gd_scene load_steps=6 format=3 uid="uid://mxrwc2j2xlyo"]
 
+[ext_resource type="Script" path="res://gameManager.gd" id="1_5yjv3"]
 [ext_resource type="PackedScene" uid="uid://8tcpyfwl35m8" path="res://canvas.tscn" id="1_eyv82"]
 [ext_resource type="Texture2D" uid="uid://vnx57otkkylt" path="res://sprites/Egg_Cutout.png" id="2_auj2f"]
 [ext_resource type="PackedScene" uid="uid://dd0p8mho2trxr" path="res://model_egg.tscn" id="3_yfpel"]
+[ext_resource type="FontFile" uid="uid://bpcout0l16cjl" path="res://BoldPixels.ttf" id="4_byj5g"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_5yjv3")
 
 [node name="canvas" parent="." instance=ExtResource("1_eyv82")]
 canvasSize = Vector2(100, 120)
@@ -30,3 +33,34 @@ texture = ExtResource("2_auj2f")
 
 [node name="model_egg" parent="." instance=ExtResource("3_yfpel")]
 position = Vector2(209, -2)
+
+[node name="timer" type="Node2D" parent="."]
+position = Vector2(151, 34)
+
+[node name="ColorRect" type="ColorRect" parent="timer"]
+offset_left = -14.0
+offset_top = -18.0
+offset_right = 53.0
+offset_bottom = 2.0
+color = Color(7.82125e-08, 0.115622, 0.175962, 1)
+
+[node name="timeLeft" type="RichTextLabel" parent="timer"]
+offset_left = -12.0
+offset_top = -23.0
+offset_right = 47.0
+offset_bottom = 7.0
+scale = Vector2(1.64, 1.88)
+theme_override_fonts/normal_font = ExtResource("4_byj5g")
+text = "3000"
+
+[node name="Label" type="Label" parent="timer"]
+offset_left = -150.0
+offset_top = -35.0
+offset_right = 270.0
+offset_bottom = 128.0
+scale = Vector2(0.8, 0.76)
+theme_override_fonts/font = ExtResource("4_byj5g")
+theme_override_font_sizes/font_size = 16
+text = "Copy the egg design on the right!"
+horizontal_alignment = 1
+autowrap_mode = 2
