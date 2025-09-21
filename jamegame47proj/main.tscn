@@ -1,17 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://mxrwc2j2xlyo"]
+[gd_scene load_steps=8 format=3 uid="uid://mxrwc2j2xlyo"]
 
 [ext_resource type="Script" path="res://gameManager.gd" id="1_5yjv3"]
 [ext_resource type="PackedScene" uid="uid://8tcpyfwl35m8" path="res://canvas.tscn" id="1_eyv82"]
 [ext_resource type="Texture2D" uid="uid://vnx57otkkylt" path="res://sprites/Egg_Cutout.png" id="2_auj2f"]
 [ext_resource type="PackedScene" uid="uid://dd0p8mho2trxr" path="res://model_egg.tscn" id="3_yfpel"]
 [ext_resource type="FontFile" uid="uid://bpcout0l16cjl" path="res://BoldPixels.ttf" id="4_byj5g"]
+[ext_resource type="Texture2D" uid="uid://bl5kjn2tkxr5x" path="res://sprites/egg_lines.png" id="6_5m3h3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8r7s"]
+size = Vector2(20.9212, 7)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5yjv3")
-
-[node name="canvas" parent="." instance=ExtResource("1_eyv82")]
-canvasSize = Vector2(100, 120)
-topLeftCornerPos = Vector2(10, 10)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 121.0
@@ -64,3 +64,56 @@ theme_override_font_sizes/font_size = 16
 text = "Copy the egg design on the right!"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="EggLines" type="Sprite2D" parent="."]
+position = Vector2(665, 255)
+texture = ExtResource("6_5m3h3")
+
+[node name="PatternZero" type="Area2D" parent="."]
+position = Vector2(665, 255)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(56, -328)
+rotation = 0.494584
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(24, -327)
+rotation = 3.70815
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(-9, -328)
+rotation = 0.380912
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(-40, -329)
+rotation = 3.71826
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(39, -328)
+rotation = -0.535374
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(7, -327)
+rotation = 2.64047
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(-26, -327)
+rotation = -0.479735
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatternZero"]
+position = Vector2(-55, -329)
+rotation = 2.69611
+shape = SubResource("RectangleShape2D_l8r7s")
+
+[node name="canvas" parent="." instance=ExtResource("1_eyv82")]
+canvasSize = Vector2(100, 120)
+topLeftCornerPos = Vector2(10, 10)

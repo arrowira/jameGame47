@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://8tcpyfwl35m8"]
+[gd_scene load_steps=5 format=3 uid="uid://8tcpyfwl35m8"]
 
 [ext_resource type="Script" path="res://canvas.gd" id="1_flsje"]
+[ext_resource type="Script" path="res://LineHitboxes.gd" id="2_i1t78"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ak31e"]
 
@@ -10,6 +11,7 @@
 script = ExtResource("1_flsje")
 
 [node name="Line2D" type="Line2D" parent="."]
+script = ExtResource("2_i1t78")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

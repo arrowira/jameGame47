@@ -37,7 +37,6 @@ func _input(event: InputEvent) -> void:
 		if pressed:
 			#actively drawing
 			if inBounds:
-			
 				currentLine.add_point(event.position)
 					
 
