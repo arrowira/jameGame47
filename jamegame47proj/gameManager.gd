@@ -19,7 +19,8 @@ func _process(delta):
 		for i in get_node("/root/Node2D/canvas/Line2D").get_children():
 			Score+=i.points.size()
 		
-		
+		if(Score>=850):
+			Score=800-Score
 		get_node("/root/Node2D/timer/Label2").text = "Score: " + str(Score)
 		hundredths = 0
 		$model_egg.clearRows()
