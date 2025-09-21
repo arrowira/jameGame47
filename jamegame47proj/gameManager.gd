@@ -19,7 +19,8 @@ func _process(delta):
 		hundredths = 0
 		$model_egg.clearRows()
 		$canvas.clear()
-		Score += randi_range(1, 100)
+		Score += get_node("/root/Node2D/canvas/Line2D").points.size() / 100
+		get_node("/root/Node2D/timer/Label2").text = "Score: " + str(Score)
 		
 		
 		
